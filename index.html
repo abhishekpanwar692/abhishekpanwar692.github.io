@@ -11,14 +11,9 @@
 :root{
   --bg:#ffffff; --card:#ffffff; --fg:#0a0a0a; --muted:#6e6e6e; --pill:#f2f2f1; --line:rgba(0,0,0,.08);
   --ring:rgba(0,0,0,.06); --ring-hover:rgba(0,0,0,.16); --green:#1d7a52; --green-soft:#e5f3ec;
+  color-scheme:light;
   --sans:"Geist",ui-sans-serif,system-ui,sans-serif;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0a0a0a; --card:#141414; --fg:#f2f2f2; --muted:#9a9a9a; --pill:#222; --line:rgba(255,255,255,.1);
-  --ring:rgba(255,255,255,.09); --ring-hover:rgba(255,255,255,.22); --green:#5fd09c; --green-soft:#16281f; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#0a0a0a; --card:#141414; --fg:#f2f2f2; --muted:#9a9a9a; --pill:#222; --line:rgba(255,255,255,.1);
-  --ring:rgba(255,255,255,.09); --ring-hover:rgba(255,255,255,.22); --green:#5fd09c; --green-soft:#16281f; color-scheme:dark}
 body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
 .page{max-width:1200px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
 @media (min-width:1000px){.page{grid-template-columns:20rem minmax(0,1fr);gap:56px}}
