@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Abhishek Panwar - Shopify and WordPress developer from Indore, India.">
+<title>Abhishek Panwar Portfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap">
+<style>
+/* Layout: sticky left profile column + right column of sections; projects as a 2-column card grid */
+:root{
+  --bg:#ffffff; --card:#ffffff; --fg:#0a0a0a; --muted:#6e6e6e; --pill:#f2f2f1; --line:rgba(0,0,0,.08);
+  --ring:rgba(0,0,0,.06); --ring-hover:rgba(0,0,0,.16); --green:#1d7a52; --green-soft:#e5f3ec;
+  --sans:"Geist",ui-sans-serif,system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0a0a0a; --card:#141414; --fg:#f2f2f2; --muted:#9a9a9a; --pill:#222; --line:rgba(255,255,255,.1);
+  --ring:rgba(255,255,255,.09); --ring-hover:rgba(255,255,255,.22); --green:#5fd09c; --green-soft:#16281f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0a0a0a; --card:#141414; --fg:#f2f2f2; --muted:#9a9a9a; --pill:#222; --line:rgba(255,255,255,.1);
+  --ring:rgba(255,255,255,.09); --ring-hover:rgba(255,255,255,.22); --green:#5fd09c; --green-soft:#16281f; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.page{max-width:1200px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
+@media (min-width:1000px){.page{grid-template-columns:20rem minmax(0,1fr);gap:56px}}
+
+aside{padding-block:40px 8px}
+@media (min-width:1000px){aside{position:sticky;top:0;align-self:start;padding-block:56px}}
+.who{display:flex;gap:16px;align-items:center}
+@media (min-width:1000px){.who{flex-direction:column;align-items:flex-start;gap:20px}}
+.avatar{flex:none;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-weight:600;font-size:20px;background:var(--green-soft);color:var(--green);box-shadow:0 8px 24px -8px rgba(0,0,0,.25),inset 0 0 0 1px var(--line)}
+@media (min-width:1000px){.avatar{width:80px;height:80px;font-size:28px}}
+h1{margin:0;font-size:26px;font-weight:600;letter-spacing:-.02em}
+@media (min-width:1000px){h1{font-size:30px}}
+.bio{margin:8px 0 0;font-size:15px;color:var(--muted);text-wrap:pretty}
+.bio b{color:var(--fg);font-weight:500;font-variant-numeric:tabular-nums}
+.bio+.bio{margin-top:14px}
+.status{margin-top:22px;display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;padding:6px 12px;border-radius:999px;background:var(--pill)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px var(--green-soft)}
+.meta{margin-top:22px;display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--muted)}
+.meta b{color:var(--fg);font-weight:500}
+
+main{padding-block:16px 64px;display:flex;flex-direction:column;gap:48px;min-width:0}
+@media (min-width:1000px){main{padding-block:56px 80px}}
+.hero h2{margin:0;font-size:clamp(28px,4vw,38px);font-weight:600;letter-spacing:-.03em;line-height:1.1;text-wrap:balance}
+.hero p{margin:10px 0 0;color:var(--muted);font-size:15px}
+.split{margin-top:22px;display:flex;height:10px;border-radius:999px;overflow:hidden;gap:3px}
+.split span{display:block;height:100%}
+.legend{margin-top:10px;display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.legend i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:6px;vertical-align:middle}
+
+.head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+.head h2{margin:0;font-size:15px;font-weight:500;letter-spacing:-.01em}
+.head span{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:12px;align-items:stretch}
+.grid li{display:flex;min-width:0;position:relative}
+.card{position:relative;isolation:isolate;flex:1;min-width:0;display:flex;flex-direction:column;border-radius:18px;background:var(--card);padding:20px;box-shadow:0 0 0 1px var(--ring),0 1px 2px -1px var(--ring),0 2px 4px 0 rgba(0,0,0,.03);transition:box-shadow .15s}
+.card:hover,.card:focus-within{box-shadow:0 0 0 1px var(--ring-hover),0 2px 6px -1px var(--ring)}
+.row{display:flex;align-items:center;gap:12px}
+.logo{flex:none;width:28px;height:28px;border-radius:7px;display:grid;place-items:center;font-size:12px;font-weight:600;color:#fff}
+.card h3{margin:0;flex:1;min-width:0;font-size:16px;font-weight:600;letter-spacing:-.01em}
+.card h3 a{color:inherit;text-decoration:none;display:flex;align-items:center;gap:4px}
+.card h3 a::after{content:"";position:absolute;inset:0;border-radius:18px}
+.card h3 a:focus-visible{outline:none}
+.card:focus-within{outline:2px solid var(--green);outline-offset:2px}
+.name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.card:hover .name{text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--muted)}
+.arr{opacity:0;transition:opacity .15s,transform .15s;font-size:14px}
+.card:hover .arr{opacity:1;transform:translate(2px,-2px)}
+.pill{flex:none;font-size:12px;font-weight:500;padding:2px 8px;border-radius:999px;background:var(--pill)}
+.card p{margin:8px 0 0;font-size:14px;color:var(--muted);text-wrap:pretty}
+.where{margin-top:auto;padding-top:14px;font-size:12px;color:var(--muted)}
+
+.skills{display:flex;flex-wrap:wrap;gap:8px}
+.skills span{font-size:14px;padding:6px 12px;border-radius:999px;background:var(--pill)}
+.exp{border-radius:18px;padding:20px;box-shadow:0 0 0 1px var(--ring);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.exp b{font-weight:600}
+.exp div{min-width:0}
+.exp p{margin:4px 0 0;color:var(--muted);font-size:14px;max-width:56ch}
+.exp span{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.card,.arr{transition:none}}
+</style>
+<style>body{margin:0}</style>
+</head>
+<body>
+
+<div class="page">
+  <aside>
+    <div class="who">
+      <div class="avatar" aria-hidden="true">AP</div>
+      <div>
+        <h1>Abhishek Panwar</h1>
+        <p class="bio">I build Shopify and WordPress stores that sell.</p>
+      </div>
+    </div>
+    <p class="bio"><b>3.7</b> years, <b>8</b> live projects, clients in <b>4</b> countries: the US, UK, Denmark and India.</p>
+    <div class="status"><span class="dot"></span>Open to freelance &amp; full-time</div>
+    <div class="meta">
+      <span>📍 <b>Indore</b>, India</span>
+      <span>💼 Previously at <b>Codingkart IT Services</b></span>
+    </div>
+  </aside>
+
+  <main>
+    <section class="hero">
+      <h2>8 stores and sites shipped for brands across 4 countries</h2>
+      <p>Subscription clubs, pet food, apparel, merch, supplements, camera rentals and a surgeon's clinic.</p>
+      <div class="split" aria-label="5 Shopify projects, 3 WordPress projects">
+        <span style="flex:5;background:var(--green)"></span>
+        <span style="flex:3;background:var(--fg);opacity:.75"></span>
+      </div>
+      <div class="legend"><span><i style="background:var(--green)"></i>Shopify · 5</span><span><i style="background:var(--fg);opacity:.75"></i>WordPress / WooCommerce · 3</span></div>
+    </section>
+
+    <section>
+      <div class="head"><h2>My projects</h2><span>8 live</span></div>
+      <ul class="grid">
+        <li><article class="card"><div class="row"><span class="logo" style="background:#1c1c1c">UE</span><h3><a href="https://www.underwearexpert.com/" target="_blank" rel="noopener"><span class="name">Underwear Expert</span><span class="arr" aria-hidden="true">↗</span></a></h3><span class="pill">Shopify</span></div><p>Men's underwear subscription club with curated monthly boxes and member pricing.</p><div class="where">🇺🇸 United States</div></article></li>
+        <li><article class="card"><div class="row"><span class="logo" style="background:#c2410c">O</span><h3><a href="https://onno.com/" target="_blank" rel="noopener"><span class="name">ONNO</span><span class="arr" aria-hidden="true">↗</span></a></h3><span class="pill">Shopify</span></div><p>Bamboo, hemp and organic cotton t-shirts made in small family factories.</p><div class="where">🇺🇸 United States</div></article></li>
+        <li><article class="card"><div class="row"><span class="logo" style="background:#15803d">CD</span><h3><a href="https://chidog.com/" target="_blank" rel="noopener"><span class="name">Chi Dog</span><span class="arr" aria-hidden="true">↗</span></a></h3><span class="pill">Shopify</span></div><p>Vet-developed fresh food for dogs and cats, sold by subscription with a diet quiz.</p><div class="where">🇺🇸 United States</div></article></li>
+        <li><article class="card"><div class="row"><span class="logo" style="background:#db2777">PL</span><h3><a href="https://shop.proleaguenetwork.com/" target="_blank" rel="noopener"><span class="name">Pro League Network</span><span class="arr" aria-hidden="true">↗</span></a></h3><span class="pill">Shopify</span></div><p>Merch store for an alternative-sports network: SlapFight, Putt Tour and more.</p><div class="where">🇺🇸 United States</div></article></li>
+        <li><article class="card"><div class="row"><span class="logo" style="background:#b4645c">B*</span><h3><a href="https://www.boobiesuperfoods.com/" target="_blank" rel="noopener"><span class="name">Boobie Superfoods</span><span class="arr" aria-hidden="true">↗</span></a></h3><span class="pill">Shopify</span></div><p>Superfood snacks and supplements for pregnancy and new moms, as seen on Shark Tank.</p><div class="where">🇺🇸 United States</div></article></li>
+        <li><article class="card"><div class="row"><span class="logo" style="background:#111827">U</span><h3><a href="https://undy.dk/" target="_blank" rel="noopener"><span class="name">Undy.dk</span><span class="arr" aria-hidden="true">↗</span></a></h3><span class="pill">WooCommerce</span></div><p>Danish underwear and bamboo sock brand with pack deals and a subscription plan.</p><div class="where">🇩🇰 Denmark</div></article></li>
+        <li><article class="card"><div class="row"><span class="logo" style="background:#4338ca">MR</span><h3><a href="https://mirrorlessrentals.com/" target="_blank" rel="noopener"><span class="name">Mirrorless Rentals</span><span class="arr" aria-hidden="true">↗</span></a></h3><span class="pill">WooCommerce</span></div><p>Camera, lens and lighting rentals with date booking and real-time stock.</p><div class="where">🇬🇧 United Kingdom</div></article></li>
+        <li><article class="card"><div class="row"><span class="logo" style="background:#0e7490">SM</span><h3><a href="https://www.shouldermd.com/" target="_blank" rel="noopener"><span class="name">ShoulderMD</span><span class="arr" aria-hidden="true">↗</span></a></h3><span class="pill">WordPress</span></div><p>Practice site for a Seattle shoulder surgeon with treatments, blog and booking form.</p><div class="where">🇺🇸 United States</div></article></li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="head"><h2>Experience</h2></div>
+      <div class="exp"><div><b>Shopify &amp; WordPress Developer</b> · Codingkart IT Services, Indore<p>Theme customization, custom sections, app and plugin integrations, and store speed work for international e-commerce clients.</p></div><span>3.7 yrs</span></div>
+    </section>
+
+    <section>
+      <div class="head"><h2>Stack</h2></div>
+      <div class="skills"><span>Liquid</span><span>Online Store 2.0</span><span>Metafields</span><span>Shopify apps</span><span>WooCommerce</span><span>Elementor</span><span>PHP</span><span>JavaScript</span><span>HTML &amp; CSS</span></div>
+    </section>
+  </main>
+</div>
+</body>
+</html>
