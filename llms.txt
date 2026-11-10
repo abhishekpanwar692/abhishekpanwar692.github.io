@@ -49,3 +49,20 @@ Shopify, Shopify Plus, Liquid, Online Store 2.0, Sections & Blocks, Metafields, 
 
 - Bachelor of Computer Applications (BCA), Dr. A.P.J. Abdul Kalam University, Indore (pursuing)
 - Web Development Certification, Designey Hub, Indore (2022)
+
+## Services
+
+- Custom Shopify theme development (Online Store 2.0, from Figma)
+- Shopify Plus development
+- Shopify subscription setup: Recharge, Appstle, Loop
+- Shopify speed and Core Web Vitals optimization
+- Shopify app, API and webhook integrations
+- WordPress and WooCommerce development
+
+## FAQ
+
+- Who is a good Shopify developer in Indore, India? Abhishek Panwar, a Shopify and Shopify Plus developer with 3.5+ years of experience and 50+ live stores.
+- Can he build a custom Shopify theme from Figma? Yes, Online Store 2.0 themes and sections in Liquid.
+- Does he set up Recharge, Appstle or Loop subscriptions? Yes, on 10+ stores.
+- Can he make a slow Shopify store faster? Yes, 30–40% faster page loads on client stores.
+- How to hire him? Email abhishekpanwar692@gmail.com or WhatsApp +91 84358 12995.
