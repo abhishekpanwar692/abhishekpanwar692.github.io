@@ -2,28 +2,28 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="theme-color" content="#0b0c12">
+<meta name="theme-color" content="#000000">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Abhishek Panwar - Shopify and Shopify Plus developer from Indore, India. 50+ stores built for D2C brands.">
+<meta property="og:title" content="Abhishek Panwar · Shopify Developer">
+<meta property="og:image" content="https://abhishekpanwar692.github.io/avatar.jpg">
 <title>Abhishek Panwar Portfolio</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Sora:wght@600;700&display=swap">
 <style>
 /* Layout: sticky left profile column + right column of sections on a deep ink background; one soft indigo glow as the only flourish */
 :root{
   color-scheme:dark;
-  --bg:#0b0c12; --bg2:#10121b; --card:#141724; --card-hi:#1a1e2e; --fg:#eef0f7; --muted:#9097ad; --dim:#5f667e;
-  --line:rgba(255,255,255,.08); --line-hi:rgba(139,156,255,.45);
-  --accent:#8b9cff; --accent2:#5eead4; --accent-soft:rgba(139,156,255,.12);
+  --bg:#000000; --bg2:#070707; --card:#0f0f0f; --card-hi:#161616; --fg:#f5f5f5; --muted:#a1a1a1; --dim:#666666;
+  --line:rgba(255,255,255,.09); --line-hi:rgba(255,255,255,.28);
+  --accent:#ffffff; --accent2:#5eead4; --accent-soft:rgba(255,255,255,.08);
   --display:"Sora",ui-sans-serif,system-ui,sans-serif; --sans:"Inter",ui-sans-serif,system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
 }
 *{box-sizing:border-box}
 html{background:var(--bg)}
 body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;position:relative;overflow-x:hidden}
-body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:
-  radial-gradient(600px 400px at 85% -5%,rgba(139,156,255,.16),transparent 70%),
-  radial-gradient(500px 380px at -10% 30%,rgba(94,234,212,.07),transparent 70%)}
+body::after{content:none}
 body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse at 50% 0%,#000 0%,transparent 70%);mask-image:radial-gradient(ellipse at 50% 0%,#000 0%,transparent 70%)}
-::selection{background:var(--accent);color:#0b0c12}
+::selection{background:var(--accent);color:#000}
 a{color:inherit}
 .page{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
 @media (min-width:1000px){.page{grid-template-columns:21rem minmax(0,1fr);gap:64px}}
@@ -32,11 +32,11 @@ aside{padding-block:44px 8px}
 @media (min-width:1000px){aside{position:sticky;top:0;align-self:start;padding-block:64px}}
 .who{display:flex;gap:16px;align-items:center}
 @media (min-width:1000px){.who{flex-direction:column;align-items:flex-start;gap:22px}}
-.avatar{flex:none;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:22px;color:#fff;background:linear-gradient(140deg,#6d7cff,#3b2fa8 60%,#1f6f6a);box-shadow:0 0 0 3px var(--bg),0 0 0 4px var(--line-hi),0 14px 40px -10px rgba(109,124,255,.6)}
-@media (min-width:1000px){.avatar{width:88px;height:88px;font-size:30px}}
+.avatar{flex:none;width:72px;height:72px;border-radius:50%;object-fit:cover;display:block;background:var(--card);box-shadow:0 0 0 3px var(--bg),0 0 0 4px var(--line-hi),0 14px 40px -12px rgba(255,255,255,.18)}
+@media (min-width:1000px){.avatar{width:120px;height:120px}}
 h1{margin:0;font-family:var(--display);font-size:28px;font-weight:700;letter-spacing:-.03em;line-height:1.1}
 @media (min-width:1000px){h1{font-size:34px}}
-.role{margin:6px 0 0;font-family:var(--mono);font-size:12.5px;letter-spacing:.02em;color:var(--accent)}
+.role{margin:6px 0 0;font-family:var(--mono);font-size:12.5px;letter-spacing:.02em;color:var(--muted)}
 .bio{margin:18px 0 0;font-size:15px;color:var(--muted);text-wrap:pretty}
 .bio b{color:var(--fg);font-weight:600;font-variant-numeric:tabular-nums}
 .status{margin-top:22px;display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:500;padding:7px 14px;border-radius:999px;background:rgba(94,234,212,.08);color:var(--accent2);box-shadow:inset 0 0 0 1px rgba(94,234,212,.25)}
@@ -49,17 +49,17 @@ h1{margin:0;font-family:var(--display);font-size:28px;font-weight:700;letter-spa
 .meta a:hover{color:var(--accent)}
 .cta{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;padding:10px 16px;border-radius:12px;text-decoration:none;transition:transform .15s,box-shadow .15s,background .15s}
-.btn.primary{background:var(--accent);color:#0b0c12;box-shadow:0 8px 24px -10px rgba(139,156,255,.8)}
-.btn.primary:hover{transform:translateY(-1px);box-shadow:0 12px 30px -10px rgba(139,156,255,.9)}
+.btn.primary{background:var(--accent);color:#000;box-shadow:0 8px 24px -10px rgba(255,255,255,.25)}
+.btn.primary:hover{transform:translateY(-1px);box-shadow:0 12px 30px -10px rgba(255,255,255,.35)}
 .btn.ghost{background:var(--card);color:var(--fg);box-shadow:inset 0 0 0 1px var(--line)}
 .btn.ghost:hover{box-shadow:inset 0 0 0 1px var(--line-hi)}
 .btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 
 main{padding-block:20px 72px;display:flex;flex-direction:column;gap:64px;min-width:0}
 @media (min-width:1000px){main{padding-block:64px 96px}}
-.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2)}
 .hero h2{margin:12px 0 0;font-family:var(--display);font-size:clamp(32px,5vw,52px);font-weight:700;letter-spacing:-.04em;line-height:1.04;text-wrap:balance}
-.hero h2 em{font-style:normal;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h2 em{font-style:normal;background:linear-gradient(90deg,#ffffff,#9a9a9a);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero p{margin:16px 0 0;color:var(--muted);font-size:17px;max-width:58ch}
 .stats{margin-top:32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
 .stats div{border-radius:16px;padding:16px 18px;background:linear-gradient(180deg,var(--card),var(--bg2));box-shadow:inset 0 0 0 1px var(--line);display:flex;flex-direction:column;gap:4px}
@@ -72,7 +72,7 @@ main{padding-block:20px 72px;display:flex;flex-direction:column;gap:64px;min-wid
 .grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:14px}
 .grid li{display:flex;min-width:0}
 .card{position:relative;isolation:isolate;flex:1;min-width:0;display:flex;flex-direction:column;border-radius:18px;background:var(--card);padding:20px;box-shadow:inset 0 0 0 1px var(--line);transition:transform .2s,box-shadow .2s,background .2s}
-.card:hover,.card:focus-within{transform:translateY(-2px);background:var(--card-hi);box-shadow:inset 0 0 0 1px var(--line-hi),0 18px 40px -20px rgba(139,156,255,.45)}
+.card:hover,.card:focus-within{transform:translateY(-2px);background:var(--card-hi);box-shadow:inset 0 0 0 1px var(--line-hi),0 18px 40px -20px rgba(0,0,0,.8)}
 .row{display:flex;align-items:center;gap:12px}
 .logo{flex:none;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-family:var(--display);font-size:13px;font-weight:700;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
 .card h3{margin:0;flex:1;min-width:0;font-family:var(--display);font-size:16.5px;font-weight:600;letter-spacing:-.02em}
@@ -83,7 +83,7 @@ main{padding-block:20px 72px;display:flex;flex-direction:column;gap:64px;min-wid
 .name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .arr{color:var(--accent);opacity:0;transition:opacity .15s,transform .15s;font-size:14px}
 .card:hover .arr{opacity:1;transform:translate(2px,-2px)}
-.pill{flex:none;font-family:var(--mono);font-size:11px;padding:3px 8px;border-radius:6px;background:var(--accent-soft);color:var(--accent)}
+.pill{flex:none;font-family:var(--mono);font-size:11px;padding:3px 8px;border-radius:6px;background:var(--accent-soft);color:var(--muted);box-shadow:inset 0 0 0 1px var(--line)}
 .card p{margin:12px 0 0;font-size:14px;color:var(--muted);text-wrap:pretty}
 .where{margin-top:auto;padding-top:16px;font-size:12px;color:var(--dim)}
 .more{margin:18px 0 0;font-size:14px;color:var(--muted);text-wrap:pretty}
@@ -97,7 +97,7 @@ main{padding-block:20px 72px;display:flex;flex-direction:column;gap:64px;min-wid
 .exp-top>span{font-family:var(--mono);font-size:12px;color:var(--accent);padding:4px 10px;border-radius:999px;background:var(--accent-soft);height:fit-content}
 .exp ul{margin:18px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14.5px;color:var(--muted)}
 .exp li{position:relative;padding-left:20px}
-.exp li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:2px;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+.exp li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:2px;background:var(--accent2)}
 
 .skillgroups{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:22px}
 .skillgroups h3{margin:0 0 10px;font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
@@ -120,7 +120,7 @@ footer.end{color:var(--dim);font-size:13px;font-family:var(--mono)}
 <div class="page">
   <aside>
     <div class="who">
-      <div class="avatar" aria-hidden="true">AP</div>
+      <img class="avatar" src="avatar.jpg" alt="Abhishek Panwar" width="120" height="120">
       <div>
         <h1>Abhishek Panwar</h1>
         <p class="role">Shopify &amp; Shopify Plus Developer</p>
